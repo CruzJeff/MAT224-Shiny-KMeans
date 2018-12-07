@@ -84,8 +84,7 @@ server <- function(input, output) {
                              sep = input$sep,
                              quote = input$quote)
                     df<-na.omit(df)
-                    max(df)
-                  return(df)})
+                  return(Filter(is.numeric,df))})
   
   output$contents <- renderTable({
     
